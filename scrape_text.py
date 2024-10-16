@@ -24,7 +24,8 @@ def main():
     global_temp_values_path = "//*[@id='primary_column']/div/div[1]/div[2]"
     title = driver.find_element(By.XPATH, site_title_path)
     farenheit_values = driver.find_element(By.XPATH, global_temp_values_path)
-    return f"{title.text}: {farenheit_values.text}"
+    print(f"{title.text}: {farenheit_values.text}")
+    driver.quit()
 
 
-print(main())
+main()
